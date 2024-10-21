@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 /**
  * Protobuf type {@code Response}
@@ -32,15 +32,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_Response_descriptor;
+    return me.grpc.RestaurantOuterClass.internal_static_Response_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_Response_fieldAccessorTable
+    return me.grpc.RestaurantOuterClass.internal_static_Response_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.grpc.restaurant.Response.class, me.grpc.restaurant.Response.Builder.class);
+            me.grpc.Response.class, me.grpc.Response.Builder.class);
   }
 
   public static final int SUCCESS_FIELD_NUMBER = 1;
@@ -139,10 +139,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof me.grpc.restaurant.Response)) {
+    if (!(obj instanceof me.grpc.Response)) {
       return super.equals(obj);
     }
-    me.grpc.restaurant.Response other = (me.grpc.restaurant.Response) obj;
+    me.grpc.Response other = (me.grpc.Response) obj;
 
     if (getSuccess()
         != other.getSuccess()) return false;
@@ -169,44 +169,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Response parseFrom(byte[] data)
+  public static me.grpc.Response parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Response parseFrom(java.io.InputStream input)
+  public static me.grpc.Response parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -214,26 +214,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static me.grpc.restaurant.Response parseDelimitedFrom(java.io.InputStream input)
+  public static me.grpc.Response parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static me.grpc.restaurant.Response parseDelimitedFrom(
+  public static me.grpc.Response parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.Response parseFrom(
+  public static me.grpc.Response parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(me.grpc.restaurant.Response prototype) {
+  public static Builder newBuilder(me.grpc.Response prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -267,21 +267,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:Response)
-      me.grpc.restaurant.ResponseOrBuilder {
+      me.grpc.ResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Response_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Response_fieldAccessorTable
+      return me.grpc.RestaurantOuterClass.internal_static_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              me.grpc.restaurant.Response.class, me.grpc.restaurant.Response.Builder.class);
+              me.grpc.Response.class, me.grpc.Response.Builder.class);
     }
 
-    // Construct using me.grpc.restaurant.Response.newBuilder()
+    // Construct using me.grpc.Response.newBuilder()
     private Builder() {
 
     }
@@ -303,17 +303,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Response_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_Response_descriptor;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Response getDefaultInstanceForType() {
-      return me.grpc.restaurant.Response.getDefaultInstance();
+    public me.grpc.Response getDefaultInstanceForType() {
+      return me.grpc.Response.getDefaultInstance();
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Response build() {
-      me.grpc.restaurant.Response result = buildPartial();
+    public me.grpc.Response build() {
+      me.grpc.Response result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -321,14 +321,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Response buildPartial() {
-      me.grpc.restaurant.Response result = new me.grpc.restaurant.Response(this);
+    public me.grpc.Response buildPartial() {
+      me.grpc.Response result = new me.grpc.Response(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(me.grpc.restaurant.Response result) {
+    private void buildPartial0(me.grpc.Response result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.success_ = success_;
@@ -340,16 +340,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof me.grpc.restaurant.Response) {
-        return mergeFrom((me.grpc.restaurant.Response)other);
+      if (other instanceof me.grpc.Response) {
+        return mergeFrom((me.grpc.Response)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(me.grpc.restaurant.Response other) {
-      if (other == me.grpc.restaurant.Response.getDefaultInstance()) return this;
+    public Builder mergeFrom(me.grpc.Response other) {
+      if (other == me.grpc.Response.getDefaultInstance()) return this;
       if (other.getSuccess() != false) {
         setSuccess(other.getSuccess());
       }
@@ -519,12 +519,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:Response)
-  private static final me.grpc.restaurant.Response DEFAULT_INSTANCE;
+  private static final me.grpc.Response DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new me.grpc.restaurant.Response();
+    DEFAULT_INSTANCE = new me.grpc.Response();
   }
 
-  public static me.grpc.restaurant.Response getDefaultInstance() {
+  public static me.grpc.Response getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public me.grpc.restaurant.Response getDefaultInstanceForType() {
+  public me.grpc.Response getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public interface CategoryRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:CategoryRequest)
@@ -18,5 +18,5 @@ public interface CategoryRequestOrBuilder extends
    * <code>.Category category = 1;</code>
    * @return The category.
    */
-  me.grpc.restaurant.Category getCategory();
+  me.grpc.Category getCategory();
 }

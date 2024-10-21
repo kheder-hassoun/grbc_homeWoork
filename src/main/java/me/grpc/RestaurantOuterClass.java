@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public final class RestaurantOuterClass {
   private RestaurantOuterClass() {}
@@ -93,7 +93,7 @@ public final class RestaurantOuterClass {
       "\032\017.RestaurantList\0220\n\023GetRestaurantByName" +
       "\022\014.NameRequest\032\013.Restaurant\0229\n\026GetMenuIt" +
       "emsByCategory\022\020.CategoryRequest\032\r.MenuIt" +
-      "emListB\026\n\022me.grpc.restaurantP\001b\006proto3"
+      "emListB\013\n\007me.grpcP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public interface NameRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:NameRequest)

@@ -3,15 +3,15 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 /**
- * Protobuf type {@code NameRequest}
+ * Protobuf type {@code CategoryRequest}
  */
-public final class NameRequest extends
+public final class CategoryRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:NameRequest)
-    NameRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:CategoryRequest)
+    CategoryRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,66 +20,45 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 28,
       /* patch= */ 2,
       /* suffix= */ "",
-      NameRequest.class.getName());
+      CategoryRequest.class.getName());
   }
-  // Use NameRequest.newBuilder() to construct.
-  private NameRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use CategoryRequest.newBuilder() to construct.
+  private CategoryRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private NameRequest() {
-    name_ = "";
+  private CategoryRequest() {
+    category_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_NameRequest_descriptor;
+    return me.grpc.RestaurantOuterClass.internal_static_CategoryRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_NameRequest_fieldAccessorTable
+    return me.grpc.RestaurantOuterClass.internal_static_CategoryRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.grpc.restaurant.NameRequest.class, me.grpc.restaurant.NameRequest.Builder.class);
+            me.grpc.CategoryRequest.class, me.grpc.CategoryRequest.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  public static final int CATEGORY_FIELD_NUMBER = 1;
+  private int category_ = 0;
   /**
-   * <code>string name = 1;</code>
-   * @return The name.
+   * <code>.Category category = 1;</code>
+   * @return The enum numeric value on the wire for category.
    */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
+  @java.lang.Override public int getCategoryValue() {
+    return category_;
   }
   /**
-   * <code>string name = 1;</code>
-   * @return The bytes for name.
+   * <code>.Category category = 1;</code>
+   * @return The category.
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public me.grpc.Category getCategory() {
+    me.grpc.Category result = me.grpc.Category.forNumber(category_);
+    return result == null ? me.grpc.Category.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -96,8 +75,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+    if (category_ != me.grpc.Category.UNKNOWN.getNumber()) {
+      output.writeEnum(1, category_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -108,8 +87,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+    if (category_ != me.grpc.Category.UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, category_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -121,13 +101,12 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof me.grpc.restaurant.NameRequest)) {
+    if (!(obj instanceof me.grpc.CategoryRequest)) {
       return super.equals(obj);
     }
-    me.grpc.restaurant.NameRequest other = (me.grpc.restaurant.NameRequest) obj;
+    me.grpc.CategoryRequest other = (me.grpc.CategoryRequest) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
+    if (category_ != other.category_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -139,51 +118,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + category_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(byte[] data)
+  public static me.grpc.CategoryRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(java.io.InputStream input)
+  public static me.grpc.CategoryRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -191,26 +170,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static me.grpc.restaurant.NameRequest parseDelimitedFrom(java.io.InputStream input)
+  public static me.grpc.CategoryRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static me.grpc.restaurant.NameRequest parseDelimitedFrom(
+  public static me.grpc.CategoryRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.NameRequest parseFrom(
+  public static me.grpc.CategoryRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -223,7 +202,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(me.grpc.restaurant.NameRequest prototype) {
+  public static Builder newBuilder(me.grpc.CategoryRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -239,26 +218,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code NameRequest}
+   * Protobuf type {@code CategoryRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:NameRequest)
-      me.grpc.restaurant.NameRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:CategoryRequest)
+      me.grpc.CategoryRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_NameRequest_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_CategoryRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_NameRequest_fieldAccessorTable
+      return me.grpc.RestaurantOuterClass.internal_static_CategoryRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              me.grpc.restaurant.NameRequest.class, me.grpc.restaurant.NameRequest.Builder.class);
+              me.grpc.CategoryRequest.class, me.grpc.CategoryRequest.Builder.class);
     }
 
-    // Construct using me.grpc.restaurant.NameRequest.newBuilder()
+    // Construct using me.grpc.CategoryRequest.newBuilder()
     private Builder() {
 
     }
@@ -272,24 +251,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      name_ = "";
+      category_ = 0;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_NameRequest_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_CategoryRequest_descriptor;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.NameRequest getDefaultInstanceForType() {
-      return me.grpc.restaurant.NameRequest.getDefaultInstance();
+    public me.grpc.CategoryRequest getDefaultInstanceForType() {
+      return me.grpc.CategoryRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.NameRequest build() {
-      me.grpc.restaurant.NameRequest result = buildPartial();
+    public me.grpc.CategoryRequest build() {
+      me.grpc.CategoryRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -297,36 +276,34 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.NameRequest buildPartial() {
-      me.grpc.restaurant.NameRequest result = new me.grpc.restaurant.NameRequest(this);
+    public me.grpc.CategoryRequest buildPartial() {
+      me.grpc.CategoryRequest result = new me.grpc.CategoryRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(me.grpc.restaurant.NameRequest result) {
+    private void buildPartial0(me.grpc.CategoryRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
+        result.category_ = category_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof me.grpc.restaurant.NameRequest) {
-        return mergeFrom((me.grpc.restaurant.NameRequest)other);
+      if (other instanceof me.grpc.CategoryRequest) {
+        return mergeFrom((me.grpc.CategoryRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(me.grpc.restaurant.NameRequest other) {
-      if (other == me.grpc.restaurant.NameRequest.getDefaultInstance()) return this;
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+    public Builder mergeFrom(me.grpc.CategoryRequest other) {
+      if (other == me.grpc.CategoryRequest.getDefaultInstance()) return this;
+      if (other.category_ != 0) {
+        setCategoryValue(other.getCategoryValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -354,11 +331,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              name_ = input.readStringRequireUtf8();
+            case 8: {
+              category_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -376,95 +353,76 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object name_ = "";
+    private int category_ = 0;
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>.Category category = 1;</code>
+     * @return The enum numeric value on the wire for category.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getCategoryValue() {
+      return category_;
     }
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @param value The name to set.
+     * <code>.Category category = 1;</code>
+     * @param value The enum numeric value on the wire for category to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
+    public Builder setCategoryValue(int value) {
+      category_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>.Category category = 1;</code>
+     * @return The category.
+     */
+    @java.lang.Override
+    public me.grpc.Category getCategory() {
+      me.grpc.Category result = me.grpc.Category.forNumber(category_);
+      return result == null ? me.grpc.Category.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.Category category = 1;</code>
+     * @param value The category to set.
      * @return This builder for chaining.
      */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
+    public Builder setCategory(me.grpc.Category value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000001;
+      category_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.Category category = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategory() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000001;
+      category_ = 0;
       onChanged();
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:NameRequest)
+    // @@protoc_insertion_point(builder_scope:CategoryRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:NameRequest)
-  private static final me.grpc.restaurant.NameRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:CategoryRequest)
+  private static final me.grpc.CategoryRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new me.grpc.restaurant.NameRequest();
+    DEFAULT_INSTANCE = new me.grpc.CategoryRequest();
   }
 
-  public static me.grpc.restaurant.NameRequest getDefaultInstance() {
+  public static me.grpc.CategoryRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<NameRequest>
-      PARSER = new com.google.protobuf.AbstractParser<NameRequest>() {
+  private static final com.google.protobuf.Parser<CategoryRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CategoryRequest>() {
     @java.lang.Override
-    public NameRequest parsePartialFrom(
+    public CategoryRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -483,17 +441,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<NameRequest> parser() {
+  public static com.google.protobuf.Parser<CategoryRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<NameRequest> getParserForType() {
+  public com.google.protobuf.Parser<CategoryRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public me.grpc.restaurant.NameRequest getDefaultInstanceForType() {
+  public me.grpc.CategoryRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

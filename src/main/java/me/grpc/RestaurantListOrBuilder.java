@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public interface RestaurantListOrBuilder extends
     // @@protoc_insertion_point(interface_extends:RestaurantList)
@@ -16,7 +16,7 @@ public interface RestaurantListOrBuilder extends
    *
    * <code>repeated .Restaurant restaurants = 1;</code>
    */
-  java.util.List<me.grpc.restaurant.Restaurant> 
+  java.util.List<me.grpc.Restaurant> 
       getRestaurantsList();
   /**
    * <pre>
@@ -25,7 +25,7 @@ public interface RestaurantListOrBuilder extends
    *
    * <code>repeated .Restaurant restaurants = 1;</code>
    */
-  me.grpc.restaurant.Restaurant getRestaurants(int index);
+  me.grpc.Restaurant getRestaurants(int index);
   /**
    * <pre>
    * list of Restu messages
@@ -41,7 +41,7 @@ public interface RestaurantListOrBuilder extends
    *
    * <code>repeated .Restaurant restaurants = 1;</code>
    */
-  java.util.List<? extends me.grpc.restaurant.RestaurantOrBuilder> 
+  java.util.List<? extends me.grpc.RestaurantOrBuilder> 
       getRestaurantsOrBuilderList();
   /**
    * <pre>
@@ -50,6 +50,6 @@ public interface RestaurantListOrBuilder extends
    *
    * <code>repeated .Restaurant restaurants = 1;</code>
    */
-  me.grpc.restaurant.RestaurantOrBuilder getRestaurantsOrBuilder(
+  me.grpc.RestaurantOrBuilder getRestaurantsOrBuilder(
       int index);
 }

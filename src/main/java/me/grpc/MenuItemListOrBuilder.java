@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public interface MenuItemListOrBuilder extends
     // @@protoc_insertion_point(interface_extends:MenuItemList)
@@ -12,12 +12,12 @@ public interface MenuItemListOrBuilder extends
   /**
    * <code>repeated .MenuItem items = 1;</code>
    */
-  java.util.List<me.grpc.restaurant.MenuItem> 
+  java.util.List<me.grpc.MenuItem> 
       getItemsList();
   /**
    * <code>repeated .MenuItem items = 1;</code>
    */
-  me.grpc.restaurant.MenuItem getItems(int index);
+  me.grpc.MenuItem getItems(int index);
   /**
    * <code>repeated .MenuItem items = 1;</code>
    */
@@ -25,11 +25,11 @@ public interface MenuItemListOrBuilder extends
   /**
    * <code>repeated .MenuItem items = 1;</code>
    */
-  java.util.List<? extends me.grpc.restaurant.MenuItemOrBuilder> 
+  java.util.List<? extends me.grpc.MenuItemOrBuilder> 
       getItemsOrBuilderList();
   /**
    * <code>repeated .MenuItem items = 1;</code>
    */
-  me.grpc.restaurant.MenuItemOrBuilder getItemsOrBuilder(
+  me.grpc.MenuItemOrBuilder getItemsOrBuilder(
       int index);
 }

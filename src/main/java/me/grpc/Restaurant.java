@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 /**
  * Protobuf type {@code Restaurant}
@@ -35,15 +35,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_Restaurant_descriptor;
+    return me.grpc.RestaurantOuterClass.internal_static_Restaurant_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return me.grpc.restaurant.RestaurantOuterClass.internal_static_Restaurant_fieldAccessorTable
+    return me.grpc.RestaurantOuterClass.internal_static_Restaurant_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.grpc.restaurant.Restaurant.class, me.grpc.restaurant.Restaurant.Builder.class);
+            me.grpc.Restaurant.class, me.grpc.Restaurant.Builder.class);
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
@@ -165,19 +165,19 @@ private static final long serialVersionUID = 0L;
 
   public static final int MENU_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<me.grpc.restaurant.MenuItem> menu_;
+  private java.util.List<me.grpc.MenuItem> menu_;
   /**
    * <code>repeated .MenuItem menu = 4;</code>
    */
   @java.lang.Override
-  public java.util.List<me.grpc.restaurant.MenuItem> getMenuList() {
+  public java.util.List<me.grpc.MenuItem> getMenuList() {
     return menu_;
   }
   /**
    * <code>repeated .MenuItem menu = 4;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends me.grpc.restaurant.MenuItemOrBuilder> 
+  public java.util.List<? extends me.grpc.MenuItemOrBuilder> 
       getMenuOrBuilderList() {
     return menu_;
   }
@@ -192,14 +192,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .MenuItem menu = 4;</code>
    */
   @java.lang.Override
-  public me.grpc.restaurant.MenuItem getMenu(int index) {
+  public me.grpc.MenuItem getMenu(int index) {
     return menu_.get(index);
   }
   /**
    * <code>repeated .MenuItem menu = 4;</code>
    */
   @java.lang.Override
-  public me.grpc.restaurant.MenuItemOrBuilder getMenuOrBuilder(
+  public me.grpc.MenuItemOrBuilder getMenuOrBuilder(
       int index) {
     return menu_.get(index);
   }
@@ -262,10 +262,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof me.grpc.restaurant.Restaurant)) {
+    if (!(obj instanceof me.grpc.Restaurant)) {
       return super.equals(obj);
     }
-    me.grpc.restaurant.Restaurant other = (me.grpc.restaurant.Restaurant) obj;
+    me.grpc.Restaurant other = (me.grpc.Restaurant) obj;
 
     if (!getName()
         .equals(other.getName())) return false;
@@ -301,44 +301,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(byte[] data)
+  public static me.grpc.Restaurant parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(java.io.InputStream input)
+  public static me.grpc.Restaurant parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -346,26 +346,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static me.grpc.restaurant.Restaurant parseDelimitedFrom(java.io.InputStream input)
+  public static me.grpc.Restaurant parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static me.grpc.restaurant.Restaurant parseDelimitedFrom(
+  public static me.grpc.Restaurant parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static me.grpc.restaurant.Restaurant parseFrom(
+  public static me.grpc.Restaurant parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(me.grpc.restaurant.Restaurant prototype) {
+  public static Builder newBuilder(me.grpc.Restaurant prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -399,21 +399,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:Restaurant)
-      me.grpc.restaurant.RestaurantOrBuilder {
+      me.grpc.RestaurantOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Restaurant_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_Restaurant_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Restaurant_fieldAccessorTable
+      return me.grpc.RestaurantOuterClass.internal_static_Restaurant_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              me.grpc.restaurant.Restaurant.class, me.grpc.restaurant.Restaurant.Builder.class);
+              me.grpc.Restaurant.class, me.grpc.Restaurant.Builder.class);
     }
 
-    // Construct using me.grpc.restaurant.Restaurant.newBuilder()
+    // Construct using me.grpc.Restaurant.newBuilder()
     private Builder() {
 
     }
@@ -443,17 +443,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return me.grpc.restaurant.RestaurantOuterClass.internal_static_Restaurant_descriptor;
+      return me.grpc.RestaurantOuterClass.internal_static_Restaurant_descriptor;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Restaurant getDefaultInstanceForType() {
-      return me.grpc.restaurant.Restaurant.getDefaultInstance();
+    public me.grpc.Restaurant getDefaultInstanceForType() {
+      return me.grpc.Restaurant.getDefaultInstance();
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Restaurant build() {
-      me.grpc.restaurant.Restaurant result = buildPartial();
+    public me.grpc.Restaurant build() {
+      me.grpc.Restaurant result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -461,15 +461,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public me.grpc.restaurant.Restaurant buildPartial() {
-      me.grpc.restaurant.Restaurant result = new me.grpc.restaurant.Restaurant(this);
+    public me.grpc.Restaurant buildPartial() {
+      me.grpc.Restaurant result = new me.grpc.Restaurant(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(me.grpc.restaurant.Restaurant result) {
+    private void buildPartialRepeatedFields(me.grpc.Restaurant result) {
       if (menuBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
           menu_ = java.util.Collections.unmodifiableList(menu_);
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(me.grpc.restaurant.Restaurant result) {
+    private void buildPartial0(me.grpc.Restaurant result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.name_ = name_;
@@ -496,16 +496,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof me.grpc.restaurant.Restaurant) {
-        return mergeFrom((me.grpc.restaurant.Restaurant)other);
+      if (other instanceof me.grpc.Restaurant) {
+        return mergeFrom((me.grpc.Restaurant)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(me.grpc.restaurant.Restaurant other) {
-      if (other == me.grpc.restaurant.Restaurant.getDefaultInstance()) return this;
+    public Builder mergeFrom(me.grpc.Restaurant other) {
+      if (other == me.grpc.Restaurant.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         bitField0_ |= 0x00000001;
@@ -589,9 +589,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 34: {
-              me.grpc.restaurant.MenuItem m =
+              me.grpc.MenuItem m =
                   input.readMessage(
-                      me.grpc.restaurant.MenuItem.parser(),
+                      me.grpc.MenuItem.parser(),
                       extensionRegistry);
               if (menuBuilder_ == null) {
                 ensureMenuIsMutable();
@@ -834,22 +834,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<me.grpc.restaurant.MenuItem> menu_ =
+    private java.util.List<me.grpc.MenuItem> menu_ =
       java.util.Collections.emptyList();
     private void ensureMenuIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        menu_ = new java.util.ArrayList<me.grpc.restaurant.MenuItem>(menu_);
+        menu_ = new java.util.ArrayList<me.grpc.MenuItem>(menu_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        me.grpc.restaurant.MenuItem, me.grpc.restaurant.MenuItem.Builder, me.grpc.restaurant.MenuItemOrBuilder> menuBuilder_;
+        me.grpc.MenuItem, me.grpc.MenuItem.Builder, me.grpc.MenuItemOrBuilder> menuBuilder_;
 
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public java.util.List<me.grpc.restaurant.MenuItem> getMenuList() {
+    public java.util.List<me.grpc.MenuItem> getMenuList() {
       if (menuBuilder_ == null) {
         return java.util.Collections.unmodifiableList(menu_);
       } else {
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public me.grpc.restaurant.MenuItem getMenu(int index) {
+    public me.grpc.MenuItem getMenu(int index) {
       if (menuBuilder_ == null) {
         return menu_.get(index);
       } else {
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder setMenu(
-        int index, me.grpc.restaurant.MenuItem value) {
+        int index, me.grpc.MenuItem value) {
       if (menuBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -897,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder setMenu(
-        int index, me.grpc.restaurant.MenuItem.Builder builderForValue) {
+        int index, me.grpc.MenuItem.Builder builderForValue) {
       if (menuBuilder_ == null) {
         ensureMenuIsMutable();
         menu_.set(index, builderForValue.build());
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public Builder addMenu(me.grpc.restaurant.MenuItem value) {
+    public Builder addMenu(me.grpc.MenuItem value) {
       if (menuBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder addMenu(
-        int index, me.grpc.restaurant.MenuItem value) {
+        int index, me.grpc.MenuItem value) {
       if (menuBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -944,7 +944,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder addMenu(
-        me.grpc.restaurant.MenuItem.Builder builderForValue) {
+        me.grpc.MenuItem.Builder builderForValue) {
       if (menuBuilder_ == null) {
         ensureMenuIsMutable();
         menu_.add(builderForValue.build());
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder addMenu(
-        int index, me.grpc.restaurant.MenuItem.Builder builderForValue) {
+        int index, me.grpc.MenuItem.Builder builderForValue) {
       if (menuBuilder_ == null) {
         ensureMenuIsMutable();
         menu_.add(index, builderForValue.build());
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .MenuItem menu = 4;</code>
      */
     public Builder addAllMenu(
-        java.lang.Iterable<? extends me.grpc.restaurant.MenuItem> values) {
+        java.lang.Iterable<? extends me.grpc.MenuItem> values) {
       if (menuBuilder_ == null) {
         ensureMenuIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1012,14 +1012,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public me.grpc.restaurant.MenuItem.Builder getMenuBuilder(
+    public me.grpc.MenuItem.Builder getMenuBuilder(
         int index) {
       return getMenuFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public me.grpc.restaurant.MenuItemOrBuilder getMenuOrBuilder(
+    public me.grpc.MenuItemOrBuilder getMenuOrBuilder(
         int index) {
       if (menuBuilder_ == null) {
         return menu_.get(index);  } else {
@@ -1029,7 +1029,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public java.util.List<? extends me.grpc.restaurant.MenuItemOrBuilder> 
+    public java.util.List<? extends me.grpc.MenuItemOrBuilder> 
          getMenuOrBuilderList() {
       if (menuBuilder_ != null) {
         return menuBuilder_.getMessageOrBuilderList();
@@ -1040,31 +1040,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public me.grpc.restaurant.MenuItem.Builder addMenuBuilder() {
+    public me.grpc.MenuItem.Builder addMenuBuilder() {
       return getMenuFieldBuilder().addBuilder(
-          me.grpc.restaurant.MenuItem.getDefaultInstance());
+          me.grpc.MenuItem.getDefaultInstance());
     }
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public me.grpc.restaurant.MenuItem.Builder addMenuBuilder(
+    public me.grpc.MenuItem.Builder addMenuBuilder(
         int index) {
       return getMenuFieldBuilder().addBuilder(
-          index, me.grpc.restaurant.MenuItem.getDefaultInstance());
+          index, me.grpc.MenuItem.getDefaultInstance());
     }
     /**
      * <code>repeated .MenuItem menu = 4;</code>
      */
-    public java.util.List<me.grpc.restaurant.MenuItem.Builder> 
+    public java.util.List<me.grpc.MenuItem.Builder> 
          getMenuBuilderList() {
       return getMenuFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        me.grpc.restaurant.MenuItem, me.grpc.restaurant.MenuItem.Builder, me.grpc.restaurant.MenuItemOrBuilder> 
+        me.grpc.MenuItem, me.grpc.MenuItem.Builder, me.grpc.MenuItemOrBuilder> 
         getMenuFieldBuilder() {
       if (menuBuilder_ == null) {
         menuBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            me.grpc.restaurant.MenuItem, me.grpc.restaurant.MenuItem.Builder, me.grpc.restaurant.MenuItemOrBuilder>(
+            me.grpc.MenuItem, me.grpc.MenuItem.Builder, me.grpc.MenuItemOrBuilder>(
                 menu_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
@@ -1078,12 +1078,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:Restaurant)
-  private static final me.grpc.restaurant.Restaurant DEFAULT_INSTANCE;
+  private static final me.grpc.Restaurant DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new me.grpc.restaurant.Restaurant();
+    DEFAULT_INSTANCE = new me.grpc.Restaurant();
   }
 
-  public static me.grpc.restaurant.Restaurant getDefaultInstance() {
+  public static me.grpc.Restaurant getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public me.grpc.restaurant.Restaurant getDefaultInstanceForType() {
+  public me.grpc.Restaurant getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

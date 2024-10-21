@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 /**
  * <pre>
@@ -136,7 +136,7 @@ public enum Category
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return me.grpc.restaurant.RestaurantOuterClass.getDescriptor().getEnumTypes().get(0);
+    return me.grpc.RestaurantOuterClass.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Category[] VALUES = values();

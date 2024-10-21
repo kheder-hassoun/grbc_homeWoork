@@ -3,7 +3,7 @@
 // source: restaurant.proto
 // Protobuf Java Version: 4.28.2
 
-package me.grpc.restaurant;
+package me.grpc;
 
 public interface MenuItemOrBuilder extends
     // @@protoc_insertion_point(interface_extends:MenuItem)
@@ -56,7 +56,7 @@ public interface MenuItemOrBuilder extends
    * <code>.Category category = 4;</code>
    * @return The category.
    */
-  me.grpc.restaurant.Category getCategory();
+  me.grpc.Category getCategory();
 
   /**
    * <code>bool available = 5;</code>
