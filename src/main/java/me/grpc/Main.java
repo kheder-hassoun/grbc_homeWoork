@@ -5,51 +5,38 @@ import com.google.gson.Gson;
 public class Main {
     public static void main(String[] args) {
 
-        // JSON serialization
         String jsonMsg = sender();
 
-        // Print size of JSON message
         System.out.println("Size of serialized JSON message: " + jsonMsg.getBytes().length + " bytes");
 
-        // Simulate receiver side to print deserialized data
         receiver(jsonMsg);
     }
 
     //-----------------------------------------------------------------------------------
     private static String sender() {
-        // Create MenuItems
         JsonMenuItem item1 = new JsonMenuItem("Item 1", "item 1 bla bla bla", 12.99f, "MAIN_COURSE", true);
         JsonMenuItem item2 = new JsonMenuItem("item 2", "item 2 bla bla bla", 5.99f, "DESSERT", true);
 
-        // Create Restaurant 1
         JsonRestaurant restaurant1 = new JsonRestaurant("kheder restaurant", "123 jableh city", "123-456-7890", new JsonMenuItem[]{item1, item2});
 
-        // Create MenuItem for Restaurant 2
         JsonMenuItem item3 = new JsonMenuItem("mateh", "mateh description", 2.50f, "BEVERAGE", true);
 
-        // Create Restaurant 2
         JsonRestaurant restaurant2 = new JsonRestaurant("hadeel restaurant", "456 latakia", "555-123-4567", new JsonMenuItem[]{item3});
 
-        // Create a RestaurantList that holds multiple restaurants
         JsonRestaurantList restaurantList = new JsonRestaurantList(new JsonRestaurant[]{restaurant1, restaurant2});
 
-        // Convert RestaurantList to JSON using Gson
         Gson gson = new Gson();
         String jsonMsg = gson.toJson(restaurantList);
 
-        // Print the JSON message
         System.out.println("Serialized JSON Message:\n" + jsonMsg);
 
         return jsonMsg;
     }
 
-    // Receiver method to deserialize and print the JSON data
     private static void receiver(String jsonMsg) {
-        // Convert JSON back to RestaurantList using Gson
         Gson gson = new Gson();
         JsonRestaurantList restaurantList = gson.fromJson(jsonMsg, JsonRestaurantList.class);
 
-        // Print deserialized Restaurant List
         System.out.println("\nDeserialized Restaurant List:");
         for (JsonRestaurant restaurant : restaurantList.getRestaurants()) {
             System.out.println("Restaurant Name: " + restaurant.getName());
