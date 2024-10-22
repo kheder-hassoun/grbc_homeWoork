@@ -1,4 +1,5 @@
 package me.grpc;
+
 import com.google.protobuf.InvalidProtocolBufferException;
 
 public class Main {
@@ -7,8 +8,17 @@ public class Main {
         byte[] msg = sender();
 
         receiver(msg);
+
+        System.out.println("Calling GetAllRestaurants service...");
+        byte[] allRestaurantsMsg = getAllRestaurants();
+        receiver(allRestaurantsMsg);
+
+        System.out.println("\nCalling GetMenuItemsByCategory service (Category: MAIN_COURSE)...");
+        byte[] menuItemsMsg = getMenuItemsByCategory(Category.MAIN_COURSE);
+        receiverMenuItems(menuItemsMsg);
     }
-//-----------------------------------------------------------------------------------
+
+    //-----------------------------------------------------------------------------------
     private static byte[] sender() {
         MenuItem item1 = MenuItem.newBuilder()
                 .setName("Item 1 ")
@@ -26,8 +36,6 @@ public class Main {
                 .setAvailable(true)
                 .build();
 
-
-
         Restaurant restaurant1 = Restaurant.newBuilder()
                 .setName("kheder resturnat")
                 .setLocation("123 jableh city")
@@ -35,11 +43,6 @@ public class Main {
                 .addMenu(item1)
                 .addMenu(item2)
                 .build();
-
-
-        //*********************************************************
-        // create another Restaurant
-        //*********************************************************
 
         MenuItem item3 = MenuItem.newBuilder()
                 .setName("mateh ")
@@ -72,6 +75,7 @@ public class Main {
         return msg;
     }
 
+    //-----------------------------------------------------------------------------------
     private static void receiver(byte[] msg) throws InvalidProtocolBufferException {
         System.out.println("Received Message (Byte Array):");
         for (byte b : msg) {
@@ -79,6 +83,7 @@ public class Main {
         }
         System.out.println("\n");
         System.out.println("Size of serialized Protocol Buffers message: " + msg.length + " bytes");
+
         RestaurantList restaurantList = RestaurantList.parseFrom(msg);
 
         System.out.println("Deserialized Restaurant List:");
@@ -93,6 +98,63 @@ public class Main {
                         " ($" + item.getPrice() + ") [Category: " + item.getCategory() + "]");
             }
             System.out.println();
+        }
+    }
+
+    //-----------------------------------------------------------------------------------
+    private static byte[] getAllRestaurants() {
+        // In real gRPC, this would call the gRPC service, but here we reuse the sender data
+        RestaurantList restaurantList = RestaurantList.newBuilder()
+                .addRestaurants(
+                        Restaurant.newBuilder()
+                                .setName("Restaurant A")
+                                .setLocation("Location A")
+                                .setContactNumber("000-111-2222")
+                                .addMenu(MenuItem.newBuilder()
+                                        .setName("Item A")
+                                        .setDescription("Description A")
+                                        .setPrice(9.99f)
+                                        .setCategory(Category.MAIN_COURSE)
+                                        .setAvailable(true)
+                                        .build())
+                                .build())
+                .build();
+
+        return restaurantList.toByteArray();
+    }
+
+    //-----------------------------------------------------------------------------------
+    // Simulate the GetMenuItemsByCategory gRPC service
+    private static byte[] getMenuItemsByCategory(Category category) {
+        MenuItemList menuItemList = MenuItemList.newBuilder()
+                .addItems(MenuItem.newBuilder()
+                        .setName("Item A")
+                        .setDescription("Description A")
+                        .setPrice(9.99f)
+                        .setCategory(category)
+                        .setAvailable(true)
+                        .build())
+                .addItems(MenuItem.newBuilder()
+                        .setName("Item B")
+                        .setDescription("Description B")
+                        .setPrice(14.99f)
+                        .setCategory(category)
+                        .setAvailable(true)
+                        .build())
+                .build();
+
+        return menuItemList.toByteArray();
+    }
+
+    //-----------------------------------------------------------------------------------
+    // Simulate receiving the MenuItems by category
+    private static void receiverMenuItems(byte[] msg) throws InvalidProtocolBufferException {
+        MenuItemList menuItemList = MenuItemList.parseFrom(msg);
+
+        System.out.println("Deserialized Menu Items by Category:");
+        for (MenuItem item : menuItemList.getItemsList()) {
+            System.out.println("- " + item.getName() + ": " + item.getDescription() +
+                    " ($" + item.getPrice() + ") [Category: " + item.getCategory() + "]");
         }
     }
 }
