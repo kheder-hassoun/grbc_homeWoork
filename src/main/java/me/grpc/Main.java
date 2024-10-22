@@ -10,7 +10,6 @@ public class Main {
     }
 //-----------------------------------------------------------------------------------
     private static byte[] sender() {
-        // Create MenuItems
         MenuItem item1 = MenuItem.newBuilder()
                 .setName("Item 1 ")
                 .setDescription(" item 1 bla bla bla ")
@@ -27,7 +26,8 @@ public class Main {
                 .setAvailable(true)
                 .build();
 
-        // create a Restaurant
+
+
         Restaurant restaurant1 = Restaurant.newBuilder()
                 .setName("kheder resturnat")
                 .setLocation("123 jableh city")
@@ -56,16 +56,13 @@ public class Main {
                 .addMenu(item3)
                 .build();
 
-        // Create a RestaurantList that holds multiple restaurants
         RestaurantList restaurantList = RestaurantList.newBuilder()
                 .addRestaurants(restaurant1)
                 .addRestaurants(restaurant2)
                 .build();
 
-        // Serialize the restaurantList to a byte array
         byte[] msg = restaurantList.toByteArray();
 
-        // Print serialized message as byte array
         System.out.println("Serialized Message (Byte Array):");
         for (byte b : msg) {
             System.out.print(b + " ");
@@ -75,14 +72,13 @@ public class Main {
         return msg;
     }
 
-    // Receiver method to deserialize the byte array back to a RestaurantList
     private static void receiver(byte[] msg) throws InvalidProtocolBufferException {
         System.out.println("Received Message (Byte Array):");
         for (byte b : msg) {
             System.out.print(b + " ");
         }
         System.out.println("\n");
-
+        System.out.println("Size of serialized Protocol Buffers message: " + msg.length + " bytes");
         RestaurantList restaurantList = RestaurantList.parseFrom(msg);
 
         System.out.println("Deserialized Restaurant List:");
