@@ -66,10 +66,10 @@ public class Main {
 
         byte[] msg = restaurantList.toByteArray();
 
-        System.out.println("Serialized Message (Byte Array):");
-        for (byte b : msg) {
-            System.out.print(b + " ");
-        }
+//        System.out.println("Serialized Message (Byte Array):");
+//        for (byte b : msg) {
+//            System.out.print(b + " ");
+//        }
         System.out.println("\n");
 
         return msg;
@@ -77,11 +77,11 @@ public class Main {
 
     //-----------------------------------------------------------------------------------
     private static void receiver(byte[] msg) throws InvalidProtocolBufferException {
-        System.out.println("Received Message (Byte Array):");
-        for (byte b : msg) {
-            System.out.print(b + " ");
-        }
-        System.out.println("\n");
+//        System.out.println("Received Message (Byte Array):");
+//        for (byte b : msg) {
+//            System.out.print(b + " ");
+//        }
+//        System.out.println("\n");
         System.out.println("Size of serialized Protocol Buffers message: " + msg.length + " bytes");
 
         RestaurantList restaurantList = RestaurantList.parseFrom(msg);
@@ -103,7 +103,6 @@ public class Main {
 
     //-----------------------------------------------------------------------------------
     private static byte[] getAllRestaurants() {
-        // In real gRPC, this would call the gRPC service, but here we reuse the sender data
         RestaurantList restaurantList = RestaurantList.newBuilder()
                 .addRestaurants(
                         Restaurant.newBuilder()
@@ -124,7 +123,6 @@ public class Main {
     }
 
     //-----------------------------------------------------------------------------------
-    // Simulate the GetMenuItemsByCategory gRPC service
     private static byte[] getMenuItemsByCategory(Category category) {
         MenuItemList menuItemList = MenuItemList.newBuilder()
                 .addItems(MenuItem.newBuilder()
